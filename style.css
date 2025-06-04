@@ -1,0 +1,624 @@
+/* Base Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #f9f9f9, #eef4ff);
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header & Navigation */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #aad4ff;
+    text-decoration: underline;
+  }
+  
+  /* Section Base Layout */
+  .section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Home Page Specific */
+  .home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .home-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .home-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .home-text .highlight {
+    color: #007bff;
+  }
+  
+  .home-text .intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .home-image {
+    flex: 1;
+    text-align: center;
+    min-width: 280px;
+  }
+  
+  .profile-image {
+    width: 320px;      /* Increased from 250px */
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  
+  /* About Page */
+  .about-text {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .about-text {
+    font-size: 1.25rem; /* Increased from 1.1rem */
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+  }
+  .about-section h2 {
+    font-size: 2.5rem; /* You can adjust this size */
+    color: #222;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  
+  /* Contact Page */
+ /* --- Advanced Attractive Contact Page Styles --- */
+
+.contact-section {
+    background: linear-gradient(135deg, #d2e0ff 0%, #f0f5ff 100%);
+    padding: 5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .contact-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow:
+      0 8px 32px rgba(0, 123, 255, 0.2),
+      0 0 60px rgba(0, 123, 255, 0.15);
+    padding: 3rem 3rem 4rem;
+    max-width: 520px;
+    width: 100%;
+    color: #003366;
+    text-align: center;
+    border: 1px solid rgba(0, 123, 255, 0.3);
+    transition: box-shadow 0.4s ease;
+    position: relative;
+  }
+  
+  .contact-container:hover {
+    box-shadow:
+      0 10px 50px rgba(0, 123, 255, 0.6),
+      0 0 80px rgba(0, 123, 255, 0.4);
+  }
+  
+  .contact-container h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+  
+  .contact-container p {
+    font-size: 1.2rem;
+    color: #004080cc;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 1.3rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #003366;
+    cursor: default;
+    user-select: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info li strong {
+    width: 90px;
+    flex-shrink: 0;
+    color: #0059b3;
+  }
+  
+  .contact-info li a {
+    flex-grow: 1;
+    color: #0066ff;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info li a:hover {
+    color: #003d99;
+    text-decoration: underline;
+  }
+  
+  .contact-info li i {
+    font-size: 1.6rem;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    min-width: 28px;
+    text-align: center;
+    user-select: none;
+  }
+  
+  /* Contact Me Button */
+  .contact-button {
+    margin-top: 3rem;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.4);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+  }
+  
+  .contact-button:hover {
+    background: linear-gradient(45deg, #0056b3, #008fff);
+    box-shadow: 0 12px 32px rgba(0, 123, 255, 0.7);
+  }
+  
+  .contact-button i {
+    font-size: 1.3rem;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contact-container {
+      padding: 2.5rem 2rem 3rem;
+      max-width: 90%;
+    }
+  
+    .contact-container h1 {
+      font-size: 2.4rem;
+    }
+  
+    .contact-info li {
+      flex-direction: column;
+      font-size: 1rem;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+  
+    .contact-info li strong {
+      width: auto;
+    }
+  }
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-button i {
+    font-size: 1.2rem;
+  }
+  
+  .contact-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.6);
+  }
+  
+  
+  
+  /* CV Page */
+  .cv-section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .cv-section .button {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #222;
+    color: #ccc;
+    margin-top: 4rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-section {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .home-text h2 {
+      font-size: 2rem;
+    }
+  
+    .home-image {
+      text-align: center;
+    }
+  
+    .profile-image {
+      width: 180px;
+      height: 180px;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  }
+ /* Sticky footer setup */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+/* --- CV Page Styles --- */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .content {
+    flex: 1; /* Take remaining space to push footer down */
+  }
+  
+  .cv-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .cv-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .cv-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+  
+  .cv-section .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cv-section .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer stays at bottom */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #222;
+    color: #ccc;
+    margin-top: auto; /* Push footer to bottom */
+  }
+    /* Make footer stick to the bottom */
+html, body {
+    height: 100%;
+  }
+  
+  .page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    flex: 1;
+  }
+/* Stick footer to bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+    /* Ensure body takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Make the full page layout */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Main content expands to fill space */
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  
+ 
+  /* Form styling */
+  
+  
+  .skills-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .skills-section h1 {
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .skills-section .intro-text {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+  
+  /* FLEXBOX LAYOUT FOR SKILLS */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Individual Skill Card */
+  .skill-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .skill-icon {
+    font-size: 3rem;
+    color: #007acc;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .skill-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #222;
+    text-align: center;
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .skills-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .skills-list li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 980px) {
+    .skills-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skill-card {
+      width: 90%;
+    }
+  }
+   
+  
+  /* Animation for "Meseret Belay" */
+.animate-name {
+    display: inline-block;
+    position: relative;
+    animation: slide-in 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+    opacity: 0;
+  }
+  
+  @keyframes slide-in {
+    from {
+      left: -100px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  
